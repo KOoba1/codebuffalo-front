@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Weekly from './views/Weekly.vue'
+import Helpmechoose from './views/Helpmechoose.vue'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/Weekly',
       name: 'Weekly',
       component: Weekly
+    },
+    {
+      path: '/Helpmechoose',
+      name: 'Helpmechoose',
+      component: Helpmechoose
     },
     {
       path: '/about',

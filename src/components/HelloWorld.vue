@@ -8,16 +8,27 @@
       <h2>Welecome to <span style="color:orange">Buffalo!</span>!</h2>
     </v-flex>
     <v-flex xs12 pa-3>
-     <v-carousel hide-delimiters>
-      <v-carousel-item
+     <v-carousel >
+      <v-carousel-item 
+
       v-for="(item,i) in items"
+
       :key="i"
       :src="item.src"
       ></v-carousel-item>
     </v-carousel>
     <v-flex xs12 mt-2>
     <v-toolbar>
-      Weekly Challenge <v-spacer></v-spacer> Some oragne thing
+      <v-btn color="primary" to="/Weekly">Weekly Challenge</v-btn><v-divider
+      class="mx-3"
+      inset
+      vertical
+    ></v-divider> <v-spacer></v-spacer> <v-divider
+      class="mx-3"
+      inset
+      vertical
+    ></v-divider>Some oragne thing
+
     </v-toolbar>
   </v-flex>
   </v-flex>

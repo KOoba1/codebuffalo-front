@@ -3,18 +3,18 @@
 		<v-layout wrap>
 			
 		<pre>{{activity}} </pre>
-
-		<v-flex pa-3 v-for="event in events" :key="event" xs12 md12 >
+		{{ activity.activity }}
+		<v-flex pa-3 v-for="event in events" :key="event.name" xs12 md12 >
       <v-card>
         <v-img
           class="white--text"
           height="200px"
-          src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+          :src="getImgFromTitle(event.name)"
         >
           <v-container fill-height fluid>
             <v-layout fill-height>
               <v-flex xs12 align-end flexbox>
-                <span class="headline">{{ event.name}}</span>
+                <span  class="headline">{{ event.name}}</span>
               </v-flex>
             </v-layout>
           </v-container>
@@ -48,7 +48,15 @@ export default {
 	data () {
 		return {
 			activity:{}, 
-			events:[]
+			events:[],
+			imageLinks:[
+			{ title:'The Albright-Knox Art Gallery' ,
+			 imgSrc:'https://media-cdn.tripadvisor.com/media/photo-s/09/43/48/69/the-museum-s-east-facade.jpg'},
+			 { title:'The Buffalo Museum of Science' ,
+			 imgSrc:'http://www.dfbuses.com/uploads/1/3/4/5/13451147/s753644566246030702_p325_i6_w400.jpeg'},
+			 ]
+
+
 		}
 	},	
 	mounted() {
@@ -65,6 +73,18 @@ export default {
 			console.log(error);
 		});
 	} ,
+	methods :{
+		getImgFromTitle(title){
+			var result = this.imageLinks.find( item => { return item.title == title});
+
+			if (result ){
+				return result.imgSrc; 
+			}
+			else {
+				return 'https://cdn.vuetifyjs.com/images/cards/docks.jpg'
+			}
+		}
+	}
 	
 
 }

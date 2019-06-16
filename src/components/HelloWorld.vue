@@ -5,7 +5,7 @@
     wrap
     >
     <v-flex xs12 pa-5>
-      <h1>Welcome to <span style="color:#DD541B">Buffalo</span>!</h1>
+      <h1 style="font-size:50px">Welcome to <span style="color:#DD541B;">Buffalo</span>!</h1>
   </br>
 
     <!-- </v-flex>
@@ -23,16 +23,13 @@
       ></v-carousel-item>
     </v-carousel>
     <v-flex xs12 mt-50>
-    <v-toolbar>
-      <v-btn color="#DD541B" dark to="/Weekly">Weekly Challenge</v-btn><v-spacer></v-spacer>Complete tasks with friends to win prizes!
 
-    </v-toolbar>
 
   </v-flex> -->
   </v-flex>
 </v-layout>
 <h2>Sponsored Events:</h2>
-<v-flex xs12 sm6>
+<v-flex xs12 px-5 mx-5>
 
 
      <v-card>
@@ -55,6 +52,7 @@
                    fill-height
                    fluid
                    pa-2
+                   justify-Center
                  >
                    <v-layout fill-height>
                      <v-flex xs12 align-end flexbox>
@@ -83,6 +81,10 @@
      </v-card>
    </v-flex>
 
+   <!-- <v-toolbar>
+     <v-btn color="#DD541B" dark to="/Weekly">Weekly Challenge</v-btn><v-spacer></v-spacer>Complete tasks with friends to win prizes!
+
+   </v-toolbar> -->
 
 <v-btn color="#DD541B" to="/CostFilter" dark>Help me choose!</v-btn>
 </v-container>

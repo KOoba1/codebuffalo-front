@@ -37,8 +37,12 @@ export default {
 		}
 	},	
 	mounted() {
-		axios.get('/api/team1/graphql?category=Creative').then( response => {
+		// axios.get('https://www.boredapi.com/api/activity').then(response => {
+		// 	this.someData = response.data; 
+		// }).catch(error => { console.log(error); })
+		axios.get('/team1/graphql?category=Creative').then( response => {
 			console.log(response.data); 
+			this.someData = response.data; 
 		}).catch(error => {
 			console.log(error);
 		});

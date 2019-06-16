@@ -36,6 +36,12 @@ export default new Router({
       component: CategoryFilter
     },
     {
+      path: '/Events/:category',
+      name: 'Events',
+     component: () => import(/* webpackChunkName: "about" */ './views/Events.vue')
+    },
+
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

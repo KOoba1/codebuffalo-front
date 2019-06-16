@@ -5,7 +5,7 @@ import Weekly from './views/Weekly.vue'
 import CostFilter from './views/CostFilter.vue'
 import ParticipantFilter from './views/ParticipantFilter.vue'
 import CategoryFilter from './views/CategoryFilter.vue'
-
+import Events  from './views/Events.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -38,7 +38,7 @@ export default new Router({
     {
       path: '/Events/:category',
       name: 'Events',
-     component: () => import(/* webpackChunkName: "about" */ './views/Events.vue')
+     component: Events
     },
 
     {

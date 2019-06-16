@@ -5,11 +5,11 @@
     wrap
     >
     <v-flex xs12 pa-5>
-      <h2>Welecome to <span style="color:orange">Buffalo!</span>!</h2>
+      <h2>Welcome to <span style="color:#DD541B">Buffalo</span>!</h2>
     </v-flex>
     <v-flex xs12 pa-3>
      <v-carousel >
-      <v-carousel-item 
+      <v-carousel-item
 
       v-for="(item,i) in items"
 

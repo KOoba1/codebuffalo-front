@@ -3,8 +3,8 @@
         <center>
             <h2>Bringing anyone with you?</h2>
             <!-- Will need to collect filter selection for API call -->
-            <v-btn color="pink" dark large>just me</v-btn>
-            <v-btn color="pink" dark large>A group</v-btn>
+            <v-btn color="pink" dark large to="/CategoryFilter">just me</v-btn>
+            <v-btn color="pink" dark large to="/CategoryFilter">A group</v-btn>
         </center>
     </div>
 </template>

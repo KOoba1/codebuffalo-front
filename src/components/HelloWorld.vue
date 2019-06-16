@@ -19,7 +19,7 @@
     </v-carousel>
     <v-flex xs12 mt-50>
     <v-toolbar>
-      <v-btn color="primary" to="/Weekly">Weekly Challenge</v-btn><v-divider
+      <v-btn color="#DD541B" to="/Weekly">Weekly Challenge</v-btn><v-divider
       class="mx-3"
       inset
       vertical
@@ -30,9 +30,12 @@
     ></v-divider>Some oragne thing
 
     </v-toolbar>
+
   </v-flex>
   </v-flex>
 </v-layout>
+
+<v-btn color="#DD541B" to="/CostFilter">Help me choose!</v-btn>
 </v-container>
 </template>
 

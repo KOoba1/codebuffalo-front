@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Weekly from './views/Weekly.vue'
-import Helpmechoose from './views/Helpmechoose.vue'
+import CostFilter from './views/CostFilter.vue'
+import ParticipantFilter from './views/ParticipantFilter.vue'
+import CategoryFilter from './views/CategoryFilter.vue'
 
 Vue.use(Router)
 
@@ -19,9 +21,19 @@ export default new Router({
       component: Weekly
     },
     {
-      path: '/Helpmechoose',
-      name: 'Helpmechoose',
-      component: Helpmechoose
+      path: '/CostFilter',
+      name: 'CostFilter',
+      component: CostFilter
+    },
+    {
+      path: '/ParticipantFilter',
+      name: 'ParticipantFilter',
+      component: ParticipantFilter
+    },
+    {
+      path: '/CategoryFilter',
+      name: 'CategoryFilter',
+      component: CategoryFilter
     },
     {
       path: '/about',

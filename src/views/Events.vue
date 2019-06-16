@@ -83,7 +83,7 @@ export default {
 		// }).catch(error => { console.log(error); })
 
 
-		axios.get('/team1/graphql?category=' + this.category).then( response => {
+		axios.get('/team1/graphql?category=' + this.category, {port: 8080 } ).then( response => {
 			console.log(response.data);
 			this.activity  = response.data.activity;
 			this.events = response.data.events;

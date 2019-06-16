@@ -21,8 +21,30 @@
     </v-img>
 		</v-layout>
 		<v-layout>
-
+			<pre>{{ someData }} </pre>
 		</v-layout>
 	</v-container>
 
 </template>
+<script>
+import axios from 'axios'; 
+
+export default {
+
+	data () {
+		return {
+			someData:{}
+		}
+	},	
+	mounted() {
+		axios.get('/api/team1/graphql?category=Creative').then( response => {
+			console.log(response.data); 
+		}).catch(error => {
+			console.log(error);
+		});
+	} ,
+	
+
+}
+
+</script>

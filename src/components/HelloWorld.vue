@@ -8,7 +8,9 @@
       <h2>Welcome to <span style="color:#DD541B">Buffalo</span>!</h2>
     </v-flex>
     <v-flex xs12 pa-3>
-     <v-carousel >
+     <v-carousel
+     hide-delimiters
+      >
       <v-carousel-item
 
       v-for="(item,i) in items"
@@ -19,7 +21,7 @@
     </v-carousel>
     <v-flex xs12 mt-50>
     <v-toolbar>
-      <v-btn color="#DD541B" to="/Weekly">Weekly Challenge</v-btn><v-divider
+      <v-btn color="#DD541B" dark to="/Weekly">Weekly Challenge</v-btn><v-divider
       class="mx-3"
       inset
       vertical
@@ -35,7 +37,7 @@
   </v-flex>
 </v-layout>
 
-<v-btn color="#DD541B" to="/CostFilter">Help me choose!</v-btn>
+<v-btn color="#DD541B" to="/CostFilter" dark>Help me choose!</v-btn>
 </v-container>
 </template>
 

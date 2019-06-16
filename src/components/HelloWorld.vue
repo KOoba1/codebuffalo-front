@@ -4,8 +4,9 @@
     text-xs-center
     wrap
     >
-    <v-flex xs12 pa-5>
-      <h1 style="font-size:50px">Welcome to <span style="color:#DD541B;">Buffalo</span>!</h1>
+    <v-flex xs12 pa-4>
+      <h1 style="font-size:40px">Welcome to <span style="color:#DD541B;">Buffalo</span>!</h1></br>
+      <body style="font-size: 18px">Bored? Let's find you something to do.</body>
   </br>
 
     <!-- </v-flex>
@@ -28,7 +29,6 @@
   </v-flex> -->
   </v-flex>
 </v-layout>
-<h2>Sponsored Events:</h2>
 <v-flex xs12 px-5 mx-5>
 
 
@@ -37,6 +37,7 @@
          fluid
          grid-list-md
        >
+       <h2>Sponsored Events:</h2></br>
          <v-layout row wrap>
            <v-flex
              v-for="card in cards"
@@ -63,6 +64,7 @@
                </v-img>
 
                <v-card-actions>
+                   FREE
                  <v-spacer></v-spacer>
                  <v-btn icon>
                    <v-icon>favorite</v-icon>
@@ -79,6 +81,10 @@
          </v-layout>
        </v-container>
      </v-card>
+     <v-toolbar>
+       <v-btn color="#DD541B" dark to="/Weekly">Weekly Challenge</v-btn><v-spacer></v-spacer>Complete tasks to win prizes!<v-spacer></v-spacer><v-divider vertical></v-divider><v-spacer></v-spacer>
+       <v-btn color="#DD541B" to="/CostFilter" justify=Center dark>Help me choose!</v-btn><v-spacer></v-spacer>Find the right event!
+     </v-toolbar>
    </v-flex>
 
    <!-- <v-toolbar>
@@ -86,7 +92,7 @@
 
    </v-toolbar> -->
 
-<v-btn color="#DD541B" to="/CostFilter" dark>Help me choose!</v-btn>
+
 </v-container>
 </template>
 
@@ -95,8 +101,7 @@
    data() {
     return {
         cards: [
-          {
-            src: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F62842329%2F208040846788%2F1%2Foriginal.20190524-145743?w=800&auto=compress&rect=0%2C0%2C2160%2C1080&s=064b1e4239bb8abea653ba46803c94c6'
+          { src: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F62842329%2F208040846788%2F1%2Foriginal.20190524-145743?w=800&auto=compress&rect=0%2C0%2C2160%2C1080&s=064b1e4239bb8abea653ba46803c94c6'
           },
           {
             src: 'https://pbs.twimg.com/media/DlSKYlsXoAASBS3.jpg'

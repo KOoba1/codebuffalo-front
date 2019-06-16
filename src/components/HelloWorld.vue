@@ -5,11 +5,14 @@
     wrap
     >
     <v-flex xs12 pa-5>
-      <h2>Welcome to <span style="color:#DD541B">Buffalo</span>!</h2>
-    </v-flex>
-    <v-flex xs12 pa-3>
+      <h1>Welcome to <span style="color:#DD541B">Buffalo</span>!</h1>
+  </br>
+
+    <!-- </v-flex>
+    <v-flex>
      <v-carousel
      hide-delimiters
+     m-5 p-5
       >
       <v-carousel-item
 
@@ -21,21 +24,65 @@
     </v-carousel>
     <v-flex xs12 mt-50>
     <v-toolbar>
-      <v-btn color="#DD541B" dark to="/Weekly">Weekly Challenge</v-btn><v-divider
-      class="mx-3"
-      inset
-      vertical
-    ></v-divider> <v-spacer></v-spacer> <v-divider
-      class="mx-3"
-      inset
-      vertical
-    ></v-divider>Some oragne thing
+      <v-btn color="#DD541B" dark to="/Weekly">Weekly Challenge</v-btn><v-spacer></v-spacer>Complete tasks with friends to win prizes!
 
     </v-toolbar>
 
-  </v-flex>
+  </v-flex> -->
   </v-flex>
 </v-layout>
+<h2>Sponsored Events:</h2>
+<v-flex xs12 sm6>
+
+
+     <v-card>
+       <v-container
+         fluid
+         grid-list-md
+       >
+         <v-layout row wrap>
+           <v-flex
+             v-for="card in cards"
+             :key="card.title"
+             v-bind="{ [`xs${card.flex}`]: true }"
+           >
+             <v-card>
+               <v-img
+                 :src="card.src"
+                 height="200px"
+               >
+                 <v-container
+                   fill-height
+                   fluid
+                   pa-2
+                 >
+                   <v-layout fill-height>
+                     <v-flex xs12 align-end flexbox>
+                       <span class="headline white--text" v-text="card.title"></span>
+                     </v-flex>
+                   </v-layout>
+                 </v-container>
+               </v-img>
+
+               <v-card-actions>
+                 <v-spacer></v-spacer>
+                 <v-btn icon>
+                   <v-icon>favorite</v-icon>
+                 </v-btn>
+                 <v-btn icon>
+                   <v-icon>bookmark</v-icon>
+                 </v-btn>
+                 <v-btn icon>
+                   <v-icon>share</v-icon>
+                 </v-btn>
+               </v-card-actions>
+             </v-card>
+           </v-flex>
+         </v-layout>
+       </v-container>
+     </v-card>
+   </v-flex>
+
 
 <v-btn color="#DD541B" to="/CostFilter" dark>Help me choose!</v-btn>
 </v-container>
@@ -45,7 +92,7 @@
   export default {
    data() {
     return {
-        items: [
+        cards: [
           {
             src: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F62842329%2F208040846788%2F1%2Foriginal.20190524-145743?w=800&auto=compress&rect=0%2C0%2C2160%2C1080&s=064b1e4239bb8abea653ba46803c94c6'
           },
@@ -56,6 +103,8 @@
     }
   }
 }
+
+
 </script>
 
 <style>
